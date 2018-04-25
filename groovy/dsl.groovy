@@ -1,3 +1,4 @@
+import hudson.model.*
 pipelineJob('Worker') {
   publishers {
     Build build = Executor.currentExecutor().currentExecutable
@@ -8,7 +9,7 @@ pipelineJob('Worker') {
   }
     definition {
         cps {
-            script(readFileFromWorkspace('/deploy.groovy'))
+            script(readFileFromWorkspace('deploy.groovy'))
             //sandbox()
         }
     }

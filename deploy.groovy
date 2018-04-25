@@ -147,7 +147,7 @@ pipeline {
                 echo "Check out acme code"
                 git branch: "master",
                         credentialsId: 'creds',
-                        url: 'https://github.com/miki-inf/k8s-cicd.git'
+                        url: 'https://github.com/miki-inf/worker.git'
 
                 // Validate kubectl
                 sh "kubectl cluster-info"
